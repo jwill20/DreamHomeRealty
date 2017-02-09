@@ -1,0 +1,16 @@
+server:
+  port: ${PORT:8004}
+spring:
+  application:
+    name: dhapplication
+  cloud:
+    config:
+      uri:  http://dhconfigserver.cfapps.io
+zuul:
+  routes:
+    dhclient: /dhclient/**
+    dhregistration: /dhregistration/**
+    dhnotification: /dhnotification/**
+    dhagent: /dhagent/**
+    dhproperty: /dhproperty/**
+    dhoffice: /dhoffice/**

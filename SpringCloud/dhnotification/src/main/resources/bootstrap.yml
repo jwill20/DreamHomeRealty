@@ -1,0 +1,9 @@
+server:
+  port: ${PORT:8001}
+spring:
+  application:
+    name: dhnotification
+  cloud:
+    config:
+      uri:  http://dhconfigserver.cfapps.io
+#      uri:  http://localhost:8888          

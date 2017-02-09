@@ -1,0 +1,9 @@
+server:
+  port: ${PORT:8003}
+spring:
+  application:
+    name: dhclient
+  cloud:
+    config:
+      uri:  http://dhconfigserver.cfapps.io
+#     uri:  http://localhost:8888

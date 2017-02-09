@@ -1,0 +1,10 @@
+# dhregistration
+server:
+  port: ${PORT:8002}
+spring:
+  application:
+    name: dhregistration
+  cloud:
+    config:
+      uri:  http://dhconfigserver.cfapps.io
+#      uri:  http://localhost:8888

@@ -1,0 +1,14 @@
+server:
+  port: ${PORT:8888}
+spring:
+  cloud:
+    config:
+      enabled: true
+      server:
+        git: 
+          uri: https://github.com/jwill20/dreamHomeConfigRepo
+          search-paths:
+            dhnotification, dhregistration, dhclient, dhproperty, dhagent, dhoffice, dhapplication
+          username: jwill20
+          password: Retpih12#
+          
