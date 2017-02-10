@@ -53,14 +53,14 @@ public class Dhclientcontroller
 	    	System.out.println("dhclient ==> Begin");
 	    	System.out.println("dhclient ==> Client values = " + client.getAddress());
 	    	
-	    	MongoCredential credential = MongoCredential.createCredential("cpoUser", "dreamHomePivotalDB", "enitlavo908#".toCharArray());
+	    	MongoCredential credential = MongoCredential.createCredential("", "", "".toCharArray());
 			
-			MongoClient mongoClient = new MongoClient(new ServerAddress(databaseIp, databasePort), Arrays.asList(credential));
+		MongoClient mongoClient = new MongoClient(new ServerAddress(databaseIp, databasePort), Arrays.asList(credential));
 			
 	    	//MongoClient mongoClient = new MongoClient(databaseIp, databasePort);
 	    	
 	    	@SuppressWarnings("deprecation")
-	    	DB db = mongoClient.getDB("dreamHomePivotalDB");
+	    	DB db = mongoClient.getDB("");
 	    	
 	    	DBCollection countersColl = db.getCollection("dhCounterColl");
 	    	DBCollection clientColl = db.getCollection("dhClientColl");
