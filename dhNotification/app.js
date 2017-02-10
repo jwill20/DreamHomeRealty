@@ -38,8 +38,7 @@ console.log("dhNotification ==> Begin Execution");
 /***************************************************************/
 /* Set up MongoDB connection pool                              */
 /***************************************************************/
-//mongoURL = "mongoDB://169.45.196.58:27017/dreamHomeAmalgam8DB";
-mongoURL = "mongoDB://cpoUser:enitlavo908#@158.85.248.111:8888/dreamHomeAmalgam8DB";
+mongoURL = "mongoDB://:";
 
 MongoClient.connect(mongoURL, {poolSize:10}, function(err, db) 
 {
