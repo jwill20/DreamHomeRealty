@@ -11,26 +11,26 @@ public class LoadDreamHomeDB
 	{
 		//MongoClient mongoClient = new MongoClient("158.85.248.111",8888);
 		
-		MongoCredential credential = MongoCredential.createCredential("cpoAdmin", "admin", "enitlavo908#".toCharArray());
+		MongoCredential credential = MongoCredential.createCredential("", "", "".toCharArray());
 		
-		MongoClient mongoClient = new MongoClient(new ServerAddress("158.85.248.111",8888), Arrays.asList(credential));
+		MongoClient mongoClient = new MongoClient(new ServerAddress("",), Arrays.asList(credential));
 		
-		DB db = mongoClient.getDB( "dreamHomeAmalgam8DB" );
+		DB db = mongoClient.getDB( "" );
 		
 		loadCounters(db);
 		
 		loadAll(db);
 		
-		//db = mongoClient.getDB( "dreamHomeOpenShiftDB" );
+		//db = mongoClient.getDB( "" );
 		//loadAll(db);
 		
-		//db    = mongoClient.getDB( "dreamHomeAWSDB" );
+		//db    = mongoClient.getDB( "" );
 		//loadAll(db);
 		
-		//db    = mongoClient.getDB( "dreamHomeAzureDB" );
+		//db    = mongoClient.getDB( "" );
 		//loadAll(db);
 		
-		//db    = mongoClient.getDB( "dreamHomePivotalDB" );
+		//db    = mongoClient.getDB( "" );
 		//loadAll(db);
 		
 		mongoClient.close();
