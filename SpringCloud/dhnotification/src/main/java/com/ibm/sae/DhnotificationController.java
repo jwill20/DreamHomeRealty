@@ -51,17 +51,15 @@ public class DhnotificationController
     	
     	//vcap.application.instance_id
     	
-    	MongoCredential credential = MongoCredential.createCredential("cpoUser", "dreamHomePivotalDB", "enitlavo908#".toCharArray());
+    	MongoCredential credential = MongoCredential.createCredential("protectedUser", "protectedDB", "neverGuessIt".toCharArray());
 		
-		MongoClient mongoClient = new MongoClient(new ServerAddress(databaseIp, databasePort), Arrays.asList(credential));
+	MongoClient mongoClient = new MongoClient(new ServerAddress(databaseIp, databasePort), Arrays.asList(credential));
 		
-		//MongoClient mongoClient = new MongoClient(databaseIp, databasePort);
-    	
     	@SuppressWarnings("deprecation")
-    	DB db = mongoClient.getDB("dreamHomePivotalDB");
+    	DB db = mongoClient.getDB("protectedDB");
     	
-    	DBCollection countersColl = db.getCollection("dhCounterColl");
-    	DBCollection notificationColl = db.getCollection("dhNotificationColl");
+    	DBCollection countersColl = db.getCollection("protectedColl");
+    	DBCollection notificationColl = db.getCollection("protectedColl");
     
     	DBObject dbo = new BasicDBObject();
     	
